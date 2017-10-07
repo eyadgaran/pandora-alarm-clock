@@ -1,4 +1,7 @@
 name: pandora_alarm
+channels:
+- defaults
+- jcarlin
 dependencies:
 - appnope=0.1.0=py27_0
 - backports=1.0=py27_0
