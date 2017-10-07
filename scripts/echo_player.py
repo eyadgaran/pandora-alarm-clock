@@ -2,9 +2,11 @@
 from selenium import webdriver
 from packaged_scripts.selenium.webelements import XPathElements,\
     XPathSlider, XPathElement
-from selenium_player import CHROMEDRIVER_PATH
 from secrets import USERNAME, PASSWORD
 import time
+from os.path import join, split, abspath
+
+CHROMEDRIVER_PATH = join(split(split(abspath(__file__))[0])[0], "env/chromedriver")
 
 
 class EchoPlayer(object):
