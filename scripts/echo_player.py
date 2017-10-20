@@ -9,7 +9,7 @@ from os.path import join, split, abspath
 PROJECT_PATH = split(split(abspath(__file__))[0])[0]
 CHROMEDRIVER_PATH = join(PROJECT_PATH, "env/chromedriver")
 OPTIONS = webdriver.ChromeOptions()
-OPTIONS.add_argument("--headless")
+# OPTIONS.add_argument("--headless")
 # OPTIONS.binary_location = '/opt/google/chrome/google-chrome'
 SERVICE_LOG_PATH = join(PROJECT_PATH, "logs/chromedriver.log")
 SERVICE_ARGS = ['--verbose']
