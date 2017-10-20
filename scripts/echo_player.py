@@ -6,7 +6,13 @@ from secrets import USERNAME, PASSWORD
 import time
 from os.path import join, split, abspath
 
-CHROMEDRIVER_PATH = join(split(split(abspath(__file__))[0])[0], "env/chromedriver")
+PROJECT_PATH = split(split(abspath(__file__))[0])[0]
+CHROMEDRIVER_PATH = join(PROJECT_PATH, "env/chromedriver")
+OPTIONS = webdriver.ChromeOptions()
+OPTIONS.add_argument("--headless")
+# OPTIONS.binary_location = '/opt/google/chrome/google-chrome'
+SERVICE_LOG_PATH = join(PROJECT_PATH, "/logs/chromedriver.log")
+SERVICE_ARGS = ['--verbose']
 
 
 class EchoPlayer(object):
@@ -21,7 +27,11 @@ class EchoPlayer(object):
 
     def initialize(self):
         # Initialize driver
-        self.driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH)
+        self.driver = webdriver.Chrome(
+            executable_path=CHROMEDRIVER_PATH,
+            chrome_options=OPTIONS,
+            service_args=SERVICE_ARGS,
+            service_log_path=SERVICE_LOG_PATH)
 
         # Navigate to webplayer
         login_url = 'https://alexa.amazon.com'
