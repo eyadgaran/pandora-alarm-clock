@@ -4,6 +4,7 @@
 sudo apt-get update
 sudo apt-get install bzip2
 sudo apt-get install unzip
+sudo apt-get install xvfb
 
 # Install Conda (Assumes 64bit Linux)
 cd /tmp
