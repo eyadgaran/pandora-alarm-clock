@@ -5,6 +5,7 @@ from packaged_scripts.selenium.webelements import XPathElements,\
 from secrets import USERNAME, PASSWORD
 import time
 from os.path import join, split, abspath
+from pyvirtualdisplay import Display
 
 PROJECT_PATH = split(split(abspath(__file__))[0])[0]
 CHROMEDRIVER_PATH = join(PROJECT_PATH, "env/chromedriver")
@@ -26,6 +27,10 @@ class EchoPlayer(object):
         self.volume_increment = 0.1
 
     def initialize(self):
+        # Initialize Display
+        self.display = Display(visible=0, size=(800, 600))
+        self.display.start()
+
         # Initialize driver
         self.driver = webdriver.Chrome(
             executable_path=CHROMEDRIVER_PATH,
@@ -94,6 +99,7 @@ class EchoPlayer(object):
 
     def close(self):
         self.driver.close()
+        self.display.stop()
 
 
 if __name__ == '__main__':

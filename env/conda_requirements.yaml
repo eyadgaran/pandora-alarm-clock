@@ -72,6 +72,7 @@ dependencies:
   - backports-abc==0.5
   - backports.shutil-get-terminal-size==1.0.0
   - backports.ssl-match-hostname==3.5.0.1
+  - easyprocess==0.2.3
   - ipython-genutils==0.2.0
   - jupyter-client==5.1.0
   - jupyter-console==5.2.0
@@ -82,5 +83,6 @@ dependencies:
   - pyobjc-framework-quartz==3.0.4
   - python-xlib==0.20
   - pyuserinput==0.1.11
+  - pyvirtualdisplay==0.2.1
   - selenium==3.6.0
 prefix: /Users/Elisha/miniconda2/envs/pandora_alarm

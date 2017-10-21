@@ -9,4 +9,6 @@ dependencies:
 - wheel=0.26.0=py27_1
 - zlib=1.2.8=0
 - pip:
+  - easyprocess==0.2.3
+  - pyvirtualdisplay==0.2.1
   - selenium==3.6.0
