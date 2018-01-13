@@ -1,0 +1,5 @@
+# Pandora Alarm
+# Weekdays
+0 8 * * 1,2,3,4,5 bash ~/code-base/Python/Pandora-Alarm/bash/cron.sh
+# Weekends
+30 9 * * 6,7 bash ~/code-base/Python/Pandora-Alarm/bash/cron.sh
