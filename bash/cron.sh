@@ -1,11 +1,10 @@
 #!/bin/bash
-PROJECT='Pandora-Alarm'
-CODE_BASE=${HOME}/code-base
+PROJECT='pandora-alarm-clock'
 
-LOGFILE=$CODE_BASE/Python/$PROJECT/logs/logfile.log
+LOGFILE=${HOME}/$PROJECT/logs/logfile.log
 touch "$LOGFILE"
 
 source ${HOME}/.bash_profile
 source activate pandora_alarm
-python $CODE_BASE/Python/$PROJECT/scripts/echo_player.py >> "$LOGFILE" 2>&1
+python ${HOME}/$PROJECT/scripts/echo_player.py >> "$LOGFILE" 2>&1
 source deactivate
