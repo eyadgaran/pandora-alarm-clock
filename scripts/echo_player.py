@@ -2,7 +2,7 @@
 from selenium import webdriver
 from packaged_scripts.selenium.webelements import XPathElements,\
     XPathSlider, XPathElement
-from secrets import USERNAME, PASSWORD
+from secrets import USERNAME, PASSWORD, STATION_MAP
 import time
 from os.path import join, split, abspath
 from pyvirtualdisplay import Display
@@ -103,15 +103,9 @@ class EchoPlayer(object):
 
 
 if __name__ == '__main__':
-    station_map = [
-        ('Mythos Radio', 30),
-        ('Lindsey Stirling Radio', 15),
-        ("Today's Hip Hop and Pop Hits Radio", .5)
-    ]
+    player = EchoPlayer(STATION_MAP[0][0])
 
-    player = EchoPlayer(station_map[0][0])
-
-    for station, wait_time in station_map:
+    for station, wait_time in STATION_MAP:
         player.change_station(station)
         if wait_time:
             time.sleep(60 * wait_time)
