@@ -17,7 +17,7 @@ sudo apt install ./google-chrome-stable_current_amd64.deb
 sudo apt --fix-broken install
 
 # Install Environment
-cd ${HOME}/code-base/Python/Pandora-Alarm/env
+cd ${HOME}/pandora-alarm-clock/env
 conda env create -n pandora_alarm -f linux_requirements.yaml
 
 # Install custom utilities package
@@ -31,7 +31,7 @@ wget https://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zip
 unzip chromedriver_linux64.zip
 
 # Create Log Directory
-cd ${HOME}/code-base/Python/Pandora-Alarm/
+cd ${HOME}/pandora-alarm-clock/
 mkdir logs
 
 # Edit Cronjob
