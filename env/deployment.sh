@@ -27,7 +27,7 @@ cd ~/code-base/Python/packaged_scripts
 python setup.py develop
 
 # Chromedriver
-wget https://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zip
+wget https://chromedriver.storage.googleapis.com/2.38/chromedriver_linux64.zip
 unzip chromedriver_linux64.zip
 
 # Create Log Directory
