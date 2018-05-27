@@ -20,12 +20,6 @@ sudo apt --fix-broken install
 cd ${HOME}/pandora-alarm-clock/env
 conda env create -n pandora_alarm -f linux_requirements.yaml
 
-# Install custom utilities package
-source ${HOME}/.bash_profile
-source activate pandora_alarm
-cd ~/code-base/Python/packaged_scripts
-python setup.py develop
-
 # Chromedriver
 wget https://chromedriver.storage.googleapis.com/2.38/chromedriver_linux64.zip
 unzip chromedriver_linux64.zip

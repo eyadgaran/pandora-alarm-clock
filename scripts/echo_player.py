@@ -1,6 +1,6 @@
 '''Functions to control echo player (pandora)'''
 from selenium import webdriver
-from packaged_scripts.selenium.webelements import XPathElements,\
+from utilities.selenium.webelements import XPathElements,\
     XPathSlider, XPathElement
 from secrets import USERNAME, PASSWORD, STATION_MAP
 import time

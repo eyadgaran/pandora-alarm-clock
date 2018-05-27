@@ -12,3 +12,4 @@ dependencies:
   - easyprocess==0.2.3
   - pyvirtualdisplay==0.2.1
   - selenium==3.6.0
+  - 'git+ssh://git@gitlab.com/eyadgaran/utilities.git@master#egg=utilities'

@@ -1,6 +1,6 @@
 '''Functions to control local player'''
 
-from packaged_scripts.system.keyboard import VirtualKeyboard
+from utilities.system.keyboard import VirtualKeyboard
 import time
 
 
